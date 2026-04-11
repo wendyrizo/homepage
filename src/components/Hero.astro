@@ -1,0 +1,45 @@
+---
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+import Link from "./Link.astro";
+---
+
+<section class="space-y-4">
+  <header
+    class="space-y-4 md:flex md:items-end md:justify-between md:space-y-0 border-b border-dashed
+    border-white/10 pb-8"
+  >
+    <div class="space-y-2">
+      <img
+        src="/me.webp"
+        alt="Profile picture of Wendy"
+        class="size-26 md:size-36 object-cover rounded-full"
+      />
+      <h1 class="text-xl md:text-2xl">Wendy Rizo</h1>
+      <p class="lowercase text-xs md:text-sm text-neutral-400">
+        Computer Engineer <span>&#183</span> Low-Level Systems
+      </p>
+    </div>
+    <nav class="flex gap-2">
+      <Link href="https://github.com/wendyrizo">
+        <GitHub />
+      </Link>
+      <Link href="https://www.linkedin.com/in/wendyrizo">
+        <LinkedIn />
+      </Link>
+    </nav>
+  </header>
+  <footer
+    class="text-pretty leading-relaxed space-y-2 text-sm border-b border-dashed
+    border-white/10 pb-8"
+  >
+    <p>
+      I like to understand things from their <b class="text-[#F9E2AF]">origin</b
+      > — not just how they work, but <em class="text-[#F9E2AF]"
+        >why they work</em
+      >. I primarily work with <b class="text-[#F9E2AF]">C</b> and <b
+        class="text-[#F9E2AF]">C++</b
+      >, focusing on low-level systems and fundamentals.
+    </p>
+  </footer>
+</section>

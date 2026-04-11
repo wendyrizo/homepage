@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/fira-code/wght.css";
+import "@fontsource-variable/playfair-display/wght.css";
 import "../styles/global.css";
 ---
 
@@ -10,18 +12,30 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Wendy Rizo - Computer Engineer</title>
   </head>
-  <body>
-    <slot />
+  <body class="bg-[#1a1b26] text-neutral-100">
+    <main class="max-w-5xl min-h-screen mx-auto px-6 py-8">
+      <slot />
+    </main>
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     margin: 0;
     width: 100%;
     height: 100%;
+    font-family: "Fira Code Variable", monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display Variable", serif;
   }
 </style>
