@@ -12,8 +12,8 @@ const project = Astro.props as Project;
   <article class="flex flex-col gap-3">
     <div class="overflow-hidden rounded">
       <img
-        src="/me.webp"
-        alt="Image of project name"
+        src={project.image}
+        alt={`Image of ${project.name}`}
         class="shadow-lg aspect-video object-cover transition duration-500 ease-in-out group-hover:scale-105"
       />
     </div>
