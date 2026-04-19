@@ -9,15 +9,37 @@ const project = Astro.props as Project;
   rel="noopener noreferrer"
   class="group block"
 >
-  <article class="flex flex-col gap-3">
-    <div class="overflow-hidden rounded">
+  <article class="flex items-center gap-3 md:gap-8">
+    <aside class="shrink-0 overflow-hidden rounded-md md:hidden">
       <img
-        src={project.image}
-        alt={`Image of ${project.name}`}
-        class="shadow-lg aspect-video object-cover transition duration-500 ease-in-out group-hover:scale-105"
+        src={project.icon}
+        alt={`Icon of ${project.name}`}
+        class="size-16 object-cover"
       />
+    </aside>
+    <aside class="overflow-hidden rounded hidden md:block">
+      <img
+        src={project.preview}
+        alt={`Preview of ${project.name}`}
+        height={200}
+        width={400}
+        class="aspect-video shadow-lg object-cover transition duration-500 ease-in-out group-hover:scale-105"
+      />
+    </aside>
+    <div class="min-w-0 space-y-2">
+      <picture class="shrink-0 overflow-hidden rounded-md hidden md:block">
+        <img
+          src={project.icon}
+          alt={`Icon of ${project.name}`}
+          class="size-16 object-cover"
+        />
+      </picture>
+      <h3 class="text-sm md:text-lg font-medium text-neutral-100 truncate">
+        {project.name}
+      </h3>
+      <p class="text-xs md:text-sm text-neutral-400 text-pretty line-clamp-2">
+        {project.description}
+      </p>
     </div>
-    <h3>{project.name}</h3>
-    <p class="text-sm text-neutral-400">{project.description}</p>
   </article>
 </a>
