@@ -8,16 +8,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    preview: "",
-    icon: "",
+    preview: "/sample.webp",
+    icon: "/favicon.svg",
     name: "test",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.",
     link: "#",
   },
   {
-    preview: "",
-    icon: "",
+    preview: "/sample.webp",
+    icon: "/favicon.svg",
     name: "test-n",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque.",
